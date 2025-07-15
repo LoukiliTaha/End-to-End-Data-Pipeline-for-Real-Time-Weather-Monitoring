@@ -1,0 +1,20 @@
+# Ignore environment variables
+.env
+
+# Python-specific ignores
+__pycache__/
+*.py[cod]
+*.log
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Virtual environments
+venv/
+.env/
