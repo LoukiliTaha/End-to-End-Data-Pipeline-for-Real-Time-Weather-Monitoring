@@ -2,11 +2,12 @@
 An end-to-end data engineering project that collects real-time weather data, processes it with Spark Streaming, stores it in PostgreSQL, automates tasks with Airflow, and visualizes trends using Grafana.
 
 
-📖 Project Overview
+📖 Project Overview :
+
 This project demonstrates a scalable data engineering pipeline for ingesting and processing live weather data from the OpenWeatherMap API.
 It automates data collection, transformation, storage, and visualization.
 
-Tech Stack
+🛠️Tech Stack:
 
 | Layer            | Tools Used                       |
 | ---------------- | -------------------------------- |
@@ -19,16 +20,17 @@ Tech Stack
 
 
 
-🔁 Pipeline Workflow
-Ingestion: Python Kafka producer pulls real-time weather data from OpenWeatherMap API.
+🔁 Pipeline Workflow:
 
-Streaming Processing: Spark Streaming consumes data, transforms temperature, humidity, wind data.
+- Ingestion: Python Kafka producer pulls real-time weather data from OpenWeatherMap API.
 
-Storage: Cleaned data is pushed into PostgreSQL.
+- Streaming Processing: Spark Streaming consumes data, transforms temperature, humidity, wind data.
 
-Visualization: Grafana queries PostgreSQL to display weather metrics.
+- Storage: Cleaned data is pushed into PostgreSQL.
 
-Automation: Airflow DAGs schedule producer jobs and health checks.
+- Visualization: Grafana queries PostgreSQL to display weather metrics.
+
+- Automation: Airflow DAGs schedule producer jobs and health checks.
 
 
 
