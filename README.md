@@ -20,7 +20,7 @@ It automates data collection, transformation, storage, and visualization.
 
 
 
-🔁 Pipeline Workflow:
+🔁 Pipeline Workflow and Architecture Overview:
 
 - Ingestion: Python Kafka producer pulls real-time weather data from OpenWeatherMap API.
 
@@ -32,6 +32,24 @@ It automates data collection, transformation, storage, and visualization.
 
 - Automation: Airflow DAGs schedule producer jobs and health checks.
 
+
+
+[Python Weather API Producer] ──> [Kafka Topic: weather_data]
+                                       │
+                                       ▼
+                             [Spark Structured Streaming]
+                                       │
+                              transforms & cleans data
+                                       ▼
+                                [PostgreSQL Database]
+                                       │
+                              Grafana reads from here
+                                       ▼
+                                [Grafana Dashboards]
+
+[Airflow] —> Optionally schedules Spark jobs, monitors pipelines, cleans data
+
+All components are containerized and orchestrated via [Docker Compose]
 
 
 
